@@ -1,4 +1,4 @@
-<%= form_for(@variant, :url => administration_variant_path) do |f| %>
+<%= form_for(@variant, :url => (@variant.new_record? ? administration_variants_path : administration_variant_path)) do |f| %>
   <% if @variant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@variant.errors.count, "error") %> prohibited this variant from being saved:</h2>
