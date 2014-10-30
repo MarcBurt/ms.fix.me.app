@@ -21,13 +21,13 @@ $mobile: new-breakpoint(max-width 360px 3);
 #content {
 	@include outer-container;
 
-	@include media($narrow) {
+/*	@include media($narrow) {
 		@include span-columns(6);
 	}
 
 	@include media($mobile) {
 		@include span-columns(3);
-	}
+	}*/
 
 
 
@@ -68,7 +68,7 @@ $mobile: new-breakpoint(max-width 360px 3);
 			@include span-columns(3);
 			@include nth-omega(4n);
 
-			@include media($narrow) {
+/*			@include media($narrow) {
 				@include span-columns(3);
 				@include nth-omega(2n);
 			}
@@ -76,7 +76,7 @@ $mobile: new-breakpoint(max-width 360px 3);
 			@include media($mobile) {
 				@include span-columns(3);
 				@include nth-omega(1n);
-			}
+			}*/
 
 			@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
 
