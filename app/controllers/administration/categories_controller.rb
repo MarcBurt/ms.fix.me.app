@@ -60,7 +60,7 @@ class Administration::CategoriesController < Administration::AdministrationContr
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
-        format.html { redirect_to @category, notice: 'Category was successfully updated.' }
+        format.html { redirect_to administration_category_path(@category), notice: 'Category was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
