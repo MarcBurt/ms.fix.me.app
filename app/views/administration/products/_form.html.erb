@@ -1,4 +1,4 @@
-<%= form_for(@product, :url => (@product.new_record? ? administration_products_path : administration_product_path)) do |f| %>
+<%= simple_form_for(@product, :url => (@product.new_record? ? administration_products_path : administration_product_path)) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -11,35 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :url_segment %>
-    <%= f.text_field :url_segment %>
-  </div>
-  <div class="field">
-    <%= f.label :subcode %>
-    <%= f.text_field :subcode %>
-  </div>
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :strapline %>
-    <%= f.text_field :strapline %>
-  </div>
-  <div class="field">
-    <%= f.label :meta_keywords %>
-    <%= f.text_field :meta_keywords %>
-  </div>
-  <div class="field">
-    <%= f.label :meta_description %>
-    <%= f.text_field :meta_description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.input :name, wrapper_html: {class: "field"} %>
+  <%= f.input :url_segment, wrapper_html: {class: "field"} %>
+  <%= f.input :subcode, wrapper_html: {class: "field"} %>
+  <%= f.input :description, wrapper_html: {class: "field"} %>
+  <%= f.input :strapline, wrapper_html: {class: "field"} %>
+  <%= f.input :meta_keywords, wrapper_html: {class: "field"} %>
+  <%= f.input :meta_description, wrapper_html: {class: "field"} %>
+  <%= f.association :categories, as: :select, label: 'Category: ', wrapper_html: {class: "field"} %>
+
+  <%= f.submit wrapper_html: {class: "actions"} %>
+
 <% end %>

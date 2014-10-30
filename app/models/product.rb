@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :meta_description, :meta_keywords, :name, :published_status, :strapline, :subcode, :url_segment
+  attr_accessible :category_ids, :description, :meta_description, :meta_keywords, :name, :published_status, :strapline, :subcode, :url_segment
 
   has_many :variants
 
