@@ -1,3 +1,14 @@
+<div id='header'>
+  <div id='navigation'>
+    <ul>
+      <li><%= link_to 'Published', administration_products_path(status: 3) %></li>
+      <li><%= link_to 'Submitted', administration_products_path(status: 2) %></li>
+      <li><%= link_to 'Draft', administration_products_path(status: 1) %></li>
+      <li><%= link_to 'Archived', administration_products_path(status: 4) %></li>
+      <li><%= link_to 'Deleted', administration_products_path(status: 5) %></li>
+    </ul>
+  </div>
+</div>  
 <h1>Listing products</h1>
 
 <table>

@@ -2,7 +2,12 @@ class Administration::ProductsController < Administration::AdministrationControl
   # GET /products
   # GET /products.json
   def index
-    @products = Product.published
+
+    if params[:status]
+      @products = Product.where(published_status: params[:status])
+    else 
+      @products = Product.published
+    end
 
     respond_to do |format|
       format.html # index.html.erb
