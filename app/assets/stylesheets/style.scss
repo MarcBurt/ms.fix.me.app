@@ -21,7 +21,8 @@ $mobile: new-breakpoint(max-width 360px 3);
 #content {
 	@include outer-container;
 
-/*	@include media($narrow) {
+
+	/*@include media($narrow) {
 		@include span-columns(6);
 	}
 

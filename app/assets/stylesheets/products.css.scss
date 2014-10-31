@@ -5,7 +5,9 @@
 
 	#images {
 		@include span-columns(6);
-/*		@include media($narrow) {
+
+		/*@include media($narrow) {
+
 			@include span-columns(3 of 3);
 		}
 		@include media($mobile) {
